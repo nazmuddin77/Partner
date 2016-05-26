@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Partner</string>
+    <string name="user_not_logged_in">user not logged in</string>
+</resources>
