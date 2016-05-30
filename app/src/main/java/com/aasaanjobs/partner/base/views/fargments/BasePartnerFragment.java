@@ -38,8 +38,6 @@ public abstract class BasePartnerFragment extends BaseFragment implements BaseVi
 
     protected abstract void initDagger();
 
-    /*
-    if needed, override this method
-     */
+
     protected void onViewInit() {}
 }

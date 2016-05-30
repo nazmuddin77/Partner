@@ -22,5 +22,5 @@ dependencies = {
         ApplicationComponent.class
 })
 public interface BaseJobComponent extends Serializable {
-    RetrofitService provideRetrofitService();
+    void injectJob(BasePartnerJob job);
 }

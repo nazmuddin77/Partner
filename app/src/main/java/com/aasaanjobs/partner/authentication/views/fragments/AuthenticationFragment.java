@@ -1,5 +1,7 @@
 package com.aasaanjobs.partner.authentication.views.fragments;
 
+import android.support.v4.view.ViewPager;
+
 import com.aasaanjobs.partner.R;
 import com.aasaanjobs.partner.authentication.di.modules.AuthFragmentModule;
 import com.aasaanjobs.partner.authentication.presenter.AuthenticationPresenter;
@@ -10,6 +12,8 @@ import com.aasaanjobs.partner.base.data.db.RealmService;
 import com.aasaanjobs.partner.base.views.fargments.BasePartnerFragment;
 
 import javax.inject.Inject;
+
+import butterknife.BindView;
 
 
 /**
@@ -27,9 +31,12 @@ public class AuthenticationFragment extends BasePartnerFragment
     @Inject
     RealmService realmService;
 
+    @BindView(R.id.v_auth)
+    ViewPager viewPager;
+
     @Override
     protected int getFragmentLayout() {
-        return R.layout.activity_main;
+        return R.layout.fragment_auth;
     }
 
     @Override
@@ -40,9 +47,5 @@ public class AuthenticationFragment extends BasePartnerFragment
 
     @Override
     protected void onViewInit() {
-        presenter.fetchFA();
-        presenter.fetchFADescription();
-        presenter.fetchFACategory();
     }
-
 }
